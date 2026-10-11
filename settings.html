@@ -1,0 +1,70 @@
+<div id="persona_overlay_settings" class="persona-overlay-settings">
+    <div class="inline-drawer">
+        <div class="inline-drawer-toggle inline-drawer-header">
+            <b><i class="fa-solid fa-user-pen"></i> Persona Overlay</b>
+            <div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div>
+        </div>
+        <div class="inline-drawer-content">
+            <div class="po-settings-content">
+            <p class="po-settings-intro">為每個聊天保存獨立 Persona 補充設定，並自動跟隨 SillyTavern 原生 Persona 的注入位置。</p>
+
+            <section class="po-settings-section">
+                <div class="po-section-heading">
+                    <div><i class="fa-solid fa-bolt" aria-hidden="true"></i><span>快速入口</span></div>
+                </div>
+                <label class="checkbox_label po-settings-toggle">
+                    <input id="persona_overlay_show_floating" type="checkbox">
+                    <span><strong>顯示懸浮快速按鈕</strong><small>魔法棒選單入口不受此設定影響</small></span>
+                </label>
+            </section>
+
+            <section class="po-settings-section">
+                <div class="po-section-heading">
+                    <div><i class="fa-solid fa-comment" aria-hidden="true"></i><span>目前聊天</span></div>
+                </div>
+                <div id="persona_overlay_settings_no_chat" class="po-empty">
+                    <i class="fa-solid fa-comments" aria-hidden="true"></i><span>請先打開一個聊天。</span>
+                </div>
+                <div id="persona_overlay_settings_chat">
+                    <label class="checkbox_label po-settings-toggle">
+                        <input id="persona_overlay_settings_enabled" type="checkbox">
+                        <span><strong>此聊天啟用</strong><small>關閉後會保留內容，但不注入 Prompt</small></span>
+                    </label>
+                    <div class="po-settings-grid">
+                        <div class="po-field-group">
+                            <label for="persona_overlay_settings_nickname">備註／暱稱 <small>不會注入 Prompt</small></label>
+                            <input id="persona_overlay_settings_nickname" class="text_pole" type="text">
+                        </div>
+                        <div class="po-field-group po-settings-grid-full">
+                            <label for="persona_overlay_settings_base_content">聊天專屬設定</label>
+                            <textarea id="persona_overlay_settings_base_content" class="text_pole" rows="5"></textarea>
+                        </div>
+                    </div>
+                    <div class="po-settings-placement">
+                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                        <div><small>目前注入位置</small><div id="persona_overlay_settings_placement" class="po-placement"></div></div>
+                    </div>
+                    <button id="persona_overlay_open_quick" type="button" class="menu_button"><i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i><span>打開快速面板</span></button>
+                </div>
+            </section>
+
+            <section id="persona_overlay_template_library" class="po-settings-section">
+                <div class="po-section-heading">
+                    <div><i class="fa-solid fa-layer-group" aria-hidden="true"></i><span>Template Library</span></div>
+                    <span id="persona_overlay_settings_template_count" class="po-count">0</span>
+                </div>
+                <p class="po-section-hint">模板是可重複使用的來源；套用至聊天後會建立獨立快照。</p>
+                <div id="persona_overlay_template_list"></div>
+                <div class="po-new-template">
+                    <div class="po-new-template-title"><i class="fa-solid fa-plus" aria-hidden="true"></i><strong>建立新模板</strong></div>
+                    <label for="persona_overlay_new_template_name">模板名稱</label>
+                    <input id="persona_overlay_new_template_name" class="text_pole" type="text" placeholder="例如：灰嶺｜嚮導身份">
+                    <label for="persona_overlay_new_template_content">模板內容</label>
+                    <textarea id="persona_overlay_new_template_content" class="text_pole" rows="5"></textarea>
+                    <button id="persona_overlay_add_template" type="button" class="menu_button"><i class="fa-solid fa-plus" aria-hidden="true"></i><span>建立模板</span></button>
+                </div>
+            </section>
+            </div>
+        </div>
+    </div>
+</div>
