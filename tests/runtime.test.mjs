@@ -68,7 +68,7 @@ test('Case 16: all entry points observe one chatMetadata state', () => {
 test('template instance snapshots survive source template deletion', () => {
     const fx = fixture();
     const runtime = new PersonaOverlayRuntime(fx.getContext);
-    runtime.getGlobalSettings().templates.push({ id: 'guide', name: '灰嶺｜嚮導身份', content: '第一防務區嚮導' });
+    runtime.getGlobalSettings().templates.push({ id: 'guide', name: '嚮導身份', content: '第一防務區嚮導' });
     runtime.applyTemplate('guide');
     runtime.getGlobalSettings().templates = [];
     assert.equal(runtime.getSnapshot().state.templateInstances[0].content, '第一防務區嚮導');

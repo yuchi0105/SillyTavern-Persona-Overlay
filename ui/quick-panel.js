@@ -95,7 +95,7 @@ export function renderQuickPanel(doc) {
                                     <span>備註／暱稱</span>
                                     <small>只用於辨識，不會注入 Prompt</small>
                                 </label>
-                                <input id="po_quick_nickname" class="text_pole" type="text" data-po-field="nickname" placeholder="例如：灰嶺嚮導線">
+                                <input id="po_quick_nickname" class="text_pole" type="text" data-po-field="nickname">
                             </div>
                             <div class="po-field-group po-content-field">
                                 <label for="po_quick_base_content">
